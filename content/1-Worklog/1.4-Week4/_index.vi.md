@@ -17,9 +17,9 @@ pre: " <b> 1.4. </b> "
 | ------ | ------------------------------------------------------ | ------------------ | -------------------- | ------------------------------------------------------------------------------------ |
 | 2    | - Tiếp tục tìm hiểu các video lab trên Youtube | 11/08/2026       | 11/05/2026         | https://youtu.be/AQlsd0nWdZk?si=flOSqYYhzsTcfHxr                                   |
 | 3    | - Thực hành lab                                    | 12/05/2026       | 17/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4    |                                                      | 13/08/2025       | 13/08/2025         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | <br>                                                 | 14/08/2025       | 15/08/2025         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6    |                                                      | 15/08/2025       | 15/08/2025         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | AWS Identity and Access Management (IAM)             | 13/05/2026       | 13/05/2026         | https://000002.awsstudygroup.com/vi/                                               |
+| 5    | **Amazon Virtual Private Cloud (Amazon VPC)**        | 14/05/2026       | 15/05/2026         | https://000003.awsstudygroup.com/vi/1-introduce/                                   |
+| 6    | **Amazon EC2** (Amazon Elastic Compute Cloud)        | 15/05/2026       | 17/05/2026         | https://000004.awsstudygroup.com/vi/                                               |
 
 - Tiếp tục xem các video Lab trên Youtube<br
 
