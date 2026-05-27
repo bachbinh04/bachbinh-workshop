@@ -13,13 +13,13 @@ pre: " <b> 1.2. </b> "
 ### Các công việc cần triển khai trong tuần này:
 
 
-| Thứ | Công việc                                                                                              | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                  |
-| ------ | ---------------------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------------------------------------------------------------------------------------ |
-| 2    | - Làm website workshop dựa trên template có sẵn                                                     | 27/04/2026       | 27/04/2026         | https://github.com/thienluhoan/fcj-workshop-template                               |
-| 3    | - Cập nhật Worklog<br>                                                                                 | 27/04/2026       | 27/04/2026         | https://github.com/thienluhoan/fcj-workshop-template                               |
-| 4    | - Push và Deploy web thông qua hugo                                                                    | 30/4/2026        | 30/4/2026          | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tiếp tục tìm hiểu thông qua các video lab trên Youtube                                          | 27/04/2026       | 03/05/2026         | https://youtu.be/AQlsd0nWdZk?si=yGFEO9qPiwxNc5eb                                   |
-| 6    | -**Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume | 15/08/2025       | 15/08/2025         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                     | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                  |
+| ------ | ----------------------------------------------------------------- | ------------------ | -------------------- | ------------------------------------------------------------------------------------ |
+| 2    | - Làm website workshop dựa trên template có sẵn            | 27/04/2026       | 27/04/2026         | https://github.com/thienluhoan/fcj-workshop-template                               |
+| 3    | - Cập nhật Worklog<br>                                        | 27/04/2026       | 27/04/2026         | https://github.com/thienluhoan/fcj-workshop-template                               |
+| 4    | - Push và Deploy web thông qua hugo                           | 30/4/2026        | 30/4/2026          | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Tiếp tục tìm hiểu thông qua các video lab trên Youtube | 27/04/2026       | 03/05/2026         | https://youtu.be/AQlsd0nWdZk?si=yGFEO9qPiwxNc5eb                                   |
+| 6    | - Tiếp xem và thực hành các bài lab                       | 27/04/2026       | 03/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 2:
 

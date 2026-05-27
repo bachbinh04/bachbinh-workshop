@@ -13,13 +13,13 @@ pre: " <b> 1.3. </b> "
 ### Các công việc cần triển khai trong tuần này:
 
 
-| Thứ | Công việc                                                                                                                                                                                            | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                  |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------------------------------------------------------------------------------------ |
-| 2    | - Làm quen với các thành viên FCJ<br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                     | 04/05/2026       | 04/05/2026         |                                                                                    |
-| 3    | - Tiếp tục xem các video Lab trên Youtube<br>                                                                                                                                                      | 05/05/2026       | 10/05/2026         | https://youtu.be/AQlsd0nWdZk?si=flOSqYYhzsTcfHxr                                   |
-| 4    | - Tạo AWS Free Tier account<br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025       | 13/08/2025         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tìm hiểu EC2 cơ bản:<br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                     | 14/08/2025       | 15/08/2025         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 7    | -Tham gia buổi Event đầu tiên tại văn phòng                                                                                                                                                     | 09/05/2026       | 09/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                                                                        | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                  |
+| ------ | -------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------------------------------------------------------------------------------------ |
+| 2    | - Làm quen với các thành viên FCJ<br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập | 04/05/2026       | 04/05/2026         |                                                                                    |
+| 3    | - Tiếp tục xem các video Lab trên Youtube<br>                                                                  | 05/05/2026       | 10/05/2026         | https://youtu.be/AQlsd0nWdZk?si=flOSqYYhzsTcfHxr                                   |
+| 4    | - Thực hành lab                                                                                                  | 06/05/2026       | 06/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Thực hành lab<br>                                                                                              | 07/05/2026       | 07/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 7    | -Tham gia buổi Event đầu tiên tại văn phòng                                                                 | 09/05/2026       | 09/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 Tiếp tục xem các video modules
 lab trên AWS Study Grou
