@@ -109,3 +109,68 @@ Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là
 &emsp;**Vai trò trong sự kiện:** Người tham dự
 
 ## Tóm tắt : Automated Prompt Engineering, AI Ready Fresher, Turning Knowledge Into A Dopamine Gamble
+
+1. **Chủ đề Hack não :**
+   * Tên gọi chính: **"Dopamin Gaming"** (hay phương pháp biến kiến thức thành "canh bạc dopamin"). Mục tiêu là đánh lừa não bộ để tạo động lực học tập bền bỉ như cách các trò chơi hoặc mạng xã hội đang vận hành.
+2. **Chủ đề Tư duy và Định hướng nghề nghiệp :**
+   * Tên gọi chính: **"Foundation & Integrity"** (Nền tảng và sự Liêm chính). Diễn giả nhấn mạnh việc tập trung vào những kiến thức cốt lõi không thay đổi trong thời đại AI, kết hợp với đức tính liêm chính và tư duy dài hạn trong sự nghiệp.
+3. **Chủ đề Phát triển phần mềm với AI :**
+   * Tên gọi chính: **"BMAD"** (viết tắt của *Build Method for AI Development*). Đây là quy trình có cấu trúc để quản lý các AI agent, giúp tối ưu hóa việc xây dựng ứng dụng và giảm thiểu lỗi (hallucination) trong quá trình phát triển.
+
+### [Event 3](4.3-Event3/)
+
+&emsp;**Tên sự kiện:** FCAJ Community Day
+
+&emsp;**Thời gian:** 09:00 ngày 27/06/2026
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự
+
+## ☁️ **09:00 - 09:25 AM****Deep Response Engine: From Detection to Autonomous Resolution**
+
+* The complexity wall in modern cloud operations
+* Shift from alert-driven to action-driven systems
+* Deep Response Engine architecture overview
+* Live demo of autonomous incident response
+* Business impact: cost reduction and zero-downtime operations
+
+---
+
+## ☁️ **09:25 - 09:55 AM****Voice Agents: Building Human-Like AI Conversations at Scale**
+
+* Evolution from IVR and chatbots to AI voice agents
+* Key challenges: latency, accuracy, and natural interaction
+* Amazon Nova Sonic and speech-to-speech foundation model
+* Architecture: telephony, streaming, Bedrock, MCP tools
+* Enterprise use cases, best practices, and live demo
+
+---
+
+## ☁️ **09:55 - 10:20 AM****AWS DevOps Agent: Your Always-Available Operations Teammate**
+
+* Overview of AWS DevOps Agent
+* Reducing MTTD and MTTR with AI-driven operations
+* Supporting multi-cloud and hybrid environments
+* Bedrock AgentCore and multi-agent reasoning approach
+* Real-world use cases and ECS demo walkthrough
+
+---
+
+## ☁️ **10:20 - 10:45 AM****AI-Powered Productivity: Workforce Planning For Enterprise**
+
+* HR transformation challenges in modern enterprises
+* Overview of Amazon Quick and its HR capabilities
+* Accelerating HR operations with automation
+* Workforce analytics and data-driven insights
+* Strategic workforce planning for enterprise decision-making
+
+---
+
+## ☁️ **10:45 - 11:30 AM****Building Secure Private MCP Connection with Amazon Quick**
+
+* Introduction to Amazon Quick as an AI assistant platform
+* MCP (Model Context Protocol) and its role in extensibility
+* Security challenges in MCP-based integrations
+* Configuring Amazon Quick VPC private connectivity
+* Demo and real-world implementation insight
