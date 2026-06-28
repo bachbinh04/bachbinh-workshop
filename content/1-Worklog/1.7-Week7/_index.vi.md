@@ -5,10 +5,12 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-### Mục tiêu tuần 7:
+### Mục tiêu tuần 7 (01/06/2026 - 07/06/2026):
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Lên chi tiết chức năng về project.
+* Tham gia vẽ kiến trúc hệ thống bằng draw.io.
+* Deploy web thông tin project và tiếp tục thực hiện project.
+* Tiếp tục xem và thực hành các bài lab.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -23,28 +25,8 @@ pre: " <b> 1.7. </b> "
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Lên chi tiết chức năng cho project theo đề tài đã chốt.
+* Tham gia vẽ kiến trúc hệ thống bằng draw.io, mô tả luồng hoạt động và các thành phần chính.
+* Deploy web giới thiệu thông tin project lên website workshop.
+* Tiếp tục xem và thực hành các bài lab trên nền tảng Cloud Journey.
+* Tiếp tục phát triển project theo kế hoạch nhóm trong tuần.

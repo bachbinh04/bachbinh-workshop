@@ -5,10 +5,11 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-### Mục tiêu tuần 2:
+### Mục tiêu tuần 2 (27/04/2026 - 03/05/2026):
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm website workshop dựa trên template có sẵn.
+* Cập nhật Worklog và deploy web thông qua Hugo.
+* Tìm hiểu và thực hành lab qua video Youtube và nền tảng FCJ.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -23,5 +24,8 @@ pre: " <b> 1.2. </b> "
 
 ### Kết quả đạt được tuần 2:
 
-* Làm được website workshop đầu tiên
-* Làm quen được các thành viên nhóm
+* Làm website workshop đầu tiên dựa trên template FCJ workshop.
+* Cập nhật Worklog tuần 2 lên website workshop.
+* Push và deploy web thành công thông qua Hugo.
+* Xem và thực hành các bài lab qua video Youtube và nền tảng Cloud Journey.
+* Làm quen với quy trình quản lý nội dung website workshop bằng Hugo.

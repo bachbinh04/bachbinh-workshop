@@ -5,10 +5,10 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-### Mục tiêu tuần 4:
+### Mục tiêu tuần 4 (11/05/2026 - 17/05/2026):
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp tục tìm hiểu các video lab trên Youtube và thực hành lab.
+* Học các module IAM, VPC và EC2 trên AWS Study Group.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -21,35 +21,10 @@ pre: " <b> 1.4. </b> "
 | 5    | **Amazon Virtual Private Cloud (Amazon VPC)**        | 14/05/2026       | 15/05/2026         | https://000003.awsstudygroup.com/vi/1-introduce/                                   |
 | 6    | **Amazon EC2** (Amazon Elastic Compute Cloud)        | 15/05/2026       | 17/05/2026         | https://000004.awsstudygroup.com/vi/                                               |
 
-- Tiếp tục xem các video Lab trên Youtube<br
-
-Tiếp tục xem các video modules
-lab trên AWS Study Grou
-
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tiếp tục xem các video lab trên Youtube và thực hành lab trên nền tảng Cloud Journey.
+* Thực hành **AWS Identity and Access Management (IAM):** hiểu cách quản lý quyền truy cập và xác thực trên AWS.
+* Tìm hiểu **Amazon Virtual Private Cloud (VPC):** nắm cách thiết lập mạng ảo riêng trên AWS.
+* Tìm hiểu **Amazon EC2:** nắm cách triển khai và quản lý máy chủ ảo trên nền tảng đám mây.
+* Củng cố kiến thức AWS thông qua việc học module và thực hành lab song song.

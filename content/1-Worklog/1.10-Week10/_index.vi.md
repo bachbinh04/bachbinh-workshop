@@ -5,52 +5,36 @@ weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
+### Mục tiêu tuần 10 (22/06/2026 - 28/06/2026):
 
-
-### Mục tiêu tuần 10:
-
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thành dự án nhóm theo kế hoạch đề ra.
+* Cập nhật website workshop: blogs và các bài báo cáo thu hoạch của các buổi event.
+* Tham gia sự kiện First Cloud Journey.
+* Viết báo cáo thực tập tổng kết quá trình thực tập.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+
+| Thứ | Công việc                                                                                                                              | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                  |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------------------------------------------- |
+| 2    | - Cập nhật website workshop: blogs, báo cáo thu hoạch các buổi event (t2, t3, t4)                                              | 22/06/2026       | 24/06/2026         |                                                                                    |
+| 3    | - Tiếp tục thực hiện project                                                                                                          | 23/06/2026       | 28/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | - Viết báo cáo thực tập                                                                                                                | 24/06/2026       | 28/06/2026         |                                                                                    |
+| 5    | - Tiếp tục hoàn thiện và hoàn thành project                                                                                           | 25/06/2026       | 28/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6    | - Hoàn thiện báo cáo thực tập                                                                                                          | 26/06/2026       | 28/06/2026         |                                                                                    |
+| 7    | - Tham gia sự kiện ngày 27/06 (thứ 7)                                                                                                  | 27/06/2026       | 27/06/2026         |                                                                                    |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Tham gia sự kiện First Cloud Journey vào ngày 27/06/2026 (thứ 7), trao đổi kiến thức và kinh nghiệm cùng các thành viên trong chương trình.
+* Cập nhật website workshop với các nội dung mới:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+  * Blogs kỹ thuật AWS
+  * Báo cáo thu hoạch các buổi event (thứ 2, thứ 3, thứ 4)
+* Tiếp tục thực hiện và hoàn thành project nhóm theo đúng tiến độ tuần 10.
+* Viết báo cáo thực tập tổng kết quá trình thực tập, bao gồm:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+  * Các công việc đã thực hiện
+  * Kiến thức và kỹ năng đã học được
+  * Kết quả đạt được từ dự án và các hoạt động trong chương trình FCJ
+* Hoàn thành các nhiệm vụ được giao trong tuần và chuẩn bị cho giai đoạn kết thúc thực tập.

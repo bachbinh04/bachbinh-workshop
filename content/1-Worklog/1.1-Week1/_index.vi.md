@@ -5,10 +5,13 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-### Mục tiêu tuần 1:
+### Mục tiêu tuần 1 (20/04/2026 - 26/04/2026):
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm quen với các thành viên FCJ và nắm nội quy, quy định tại đơn vị thực tập.
+* Tìm hiểu AWS và các nhóm dịch vụ cơ bản (Compute, Storage, Networking, Database, ...).
+* Tạo AWS Free Tier account, làm quen AWS Console và AWS CLI.
+* Tìm hiểu EC2 cơ bản: instance types, AMI, EBS, SSH, Elastic IP.
+* Hoàn thành 5 nhiệm vụ để nhận thêm 100 credits.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -23,6 +26,7 @@ pre: " <b> 1.1. </b> "
 
 ### Kết quả đạt được tuần 1:
 
+* Làm quen với các thành viên FCJ và nắm được các nội quy, quy định tại đơn vị thực tập.
 * Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
 
   * Compute
@@ -32,19 +36,7 @@ pre: " <b> 1.1. </b> "
   * ...
 * Đã tạo và cấu hình AWS Free Tier account thành công.
 * Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Cài đặt và cấu hình AWS CLI trên máy tính, bao gồm Access Key, Secret Key, Region mặc định.
+* Tìm hiểu EC2 cơ bản: instance types, AMI, EBS, các cách remote SSH vào EC2, Elastic IP.
+* Hoàn thành 5 nhiệm vụ để nhận thêm 100 credits trên nền tảng FCJ.
 * Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...

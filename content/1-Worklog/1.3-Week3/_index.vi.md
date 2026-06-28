@@ -5,10 +5,10 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-### Mục tiêu tuần 3:
+### Mục tiêu tuần 3 (04/05/2026 - 10/05/2026):
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp tục xem các video lab trên Youtube và thực hành lab trên nền tảng FCJ.
+* Tham gia buổi Event đầu tiên tại văn phòng.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -21,33 +21,10 @@ pre: " <b> 1.3. </b> "
 | 5    | - Thực hành lab<br>                                                                                              | 07/05/2026       | 07/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 | 7    | -Tham gia buổi Event đầu tiên tại văn phòng                                                                 | 09/05/2026       | 09/05/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
-Tiếp tục xem các video modules
-lab trên AWS Study Grou
-
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Làm quen với các thành viên FCJ và nắm nội quy, quy định tại đơn vị thực tập.
+* Tiếp tục xem các video lab trên Youtube và thực hành lab trên nền tảng Cloud Journey.
+* Thực hành lab thành công các ngày trong tuần.
+* Tham gia buổi Event đầu tiên tại văn phòng ngày 09/05/2026 (thứ 7).
+* Củng cố kiến thức AWS thông qua việc kết hợp lý thuyết và thực hành lab.

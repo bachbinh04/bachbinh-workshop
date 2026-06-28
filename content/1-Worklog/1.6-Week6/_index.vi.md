@@ -5,10 +5,11 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-### Mục tiêu tuần 6:
+### Mục tiêu tuần 6 (25/05/2026 - 31/05/2026):
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tham gia buổi lên văn phòng và lên ý tưởng project.
+* Tạo app Pet beta và thiết kế model Pet.
+* Thiết kế ý tưởng chức năng cho project.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -23,28 +24,9 @@ pre: " <b> 1.6. </b> "
 
 ### Kết quả đạt được tuần 6:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tham gia buổi lên văn phòng ngày 25/05/2026 và cùng nhóm lên ý tưởng project.
+* Hoàn thiện ý tưởng project cho đề tài cuối kỳ.
+* Tạo app Pet beta phiên bản đầu tiên.
+* Thiết kế model Pet cho ứng dụng.
+* Thiết kế ý tưởng chức năng chi tiết, ghi nhận trên tài liệu nhóm.
+* Xác định được hướng phát triển và phạm vi chức năng cho project Pet.

@@ -5,10 +5,11 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-### Mục tiêu tuần 5:
+### Mục tiêu tuần 5 (18/05/2026 - 24/05/2026):
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Thực hành lab trên nền tảng FCJ.
+* Tham gia buổi lên văn phòng.
+* Nhóm chốt đề tài cuối kỳ.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -23,28 +24,7 @@ pre: " <b> 1.5. </b> "
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thực hành lab thành công các ngày trong tuần trên nền tảng Cloud Journey.
+* Tham gia buổi lên văn phòng ngày 20/05/2026, trao đổi và làm việc trực tiếp cùng nhóm.
+* Nhóm đã chốt đề tài cuối kỳ, xác định hướng phát triển project cho giai đoạn tiếp theo.
+* Củng cố kiến thức AWS thông qua thực hành lab liên tục trong tuần.
