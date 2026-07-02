@@ -1,124 +1,138 @@
 ---
 title: "Blog 2"
-date: 2024-01-01
+date: 2026-06-16
 weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
+# Xây dựng ứng dụng B2C an toàn với Amazon Cognito và Amazon Verified Permissions
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+Trong các ứng dụng B2C hiện đại, việc quản lý người dùng không chỉ dừng lại ở việc đăng nhập mà còn bao gồm kiểm soát quyền truy cập đến từng tài nguyên cụ thể.
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+Thông thường, hệ thống phải xử lý hai vấn đề chính:
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+- **Authentication:** Xác thực người dùng là ai  
+- **Authorization:** Người dùng được phép làm gì  
 
----
-
-## Hướng dẫn kiến trúc
-
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
-
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
-
-**Kiến trúc giải pháp bây giờ như sau:**
-
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+AWS đề xuất kết hợp **Amazon Cognito** và **Amazon Verified Permissions** để tách biệt hai phần này, giúp hệ thống rõ ràng và dễ mở rộng hơn.
 
 ---
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+## Vấn đề của cách làm truyền thống
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+Trong nhiều ứng dụng, logic phân quyền thường được viết trực tiếp trong code:
 
----
+- Khó mở rộng khi số lượng role tăng
+- Khó bảo trì khi rule phức tạp
+- Dễ bị phân tán logic authorization
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
-
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Khi hệ thống phát triển lớn hơn, cách tiếp cận này không còn phù hợp.
 
 ---
 
-## The pub/sub hub
+## Giải pháp của AWS
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+AWS đưa ra kiến trúc tách biệt:
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+- **Amazon Cognito:** xử lý đăng nhập và cấp JWT token
+- **Amazon Verified Permissions (AVP):** đánh giá quyền truy cập dựa trên policy
 
----
-
-## Core microservice
-
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
-
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+Thay vì viết logic trong code, ta định nghĩa policy riêng bằng **Cedar language** và để AVP xử lý quyết định.
 
 ---
 
-## Front door microservice
+## Luồng hoạt động hệ thống
 
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
+**(Chèn hình tại đây: Architecture Diagram)**  
+ *Hình 1: Luồng Cognito + Verified Permissions*
 
----
+Luồng xử lý cơ bản:
 
-## Staging ER7 microservice
-
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+1. User đăng nhập qua Amazon Cognito  
+2. Cognito trả về JWT token  
+3. Application gửi request kèm token  
+4. Backend gọi Amazon Verified Permissions  
+5. AVP đánh giá policy  
+6. Trả về Allow / Deny  
 
 ---
 
-## Tính năng mới trong giải pháp
+## Các mô hình phân quyền hỗ trợ
 
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+Giải pháp hỗ trợ nhiều kiểu authorization phổ biến:
+
+- **Resource-based access:** user chỉ truy cập tài nguyên của mình  
+- **Role-based access (RBAC):** phân quyền theo vai trò  
+- **Hierarchical access:** phân cấp quyền theo tổ chức  
+- **Explicit deny:** luôn ưu tiên deny  
+- **Admin override:** admin có quyền cao hơn  
+
+---
+
+## Lợi ích chính
+
+Giải pháp này mang lại nhiều lợi ích rõ ràng:
+
+- Tách biệt authentication và authorization  
+- Giảm logic phân quyền trong application code  
+- Dễ thay đổi policy mà không cần deploy lại hệ thống  
+- Tăng khả năng audit và quản lý quyền tập trung  
+- Phù hợp hệ thống B2C / SaaS nhiều người dùng  
+
+---
+
+### Amazon Cognito
+- Tính theo **Monthly Active Users (MAU)**  
+- Chi phí tăng theo số lượng người dùng  
+
+### Amazon Verified Permissions
+- Tính theo số lượng request đánh giá policy  
+- Hệ thống càng nhiều request → chi phí càng cao  
+
+- Với hệ thống nhỏ: chi phí thấp  
+- Với hệ thống lớn: cần tối ưu số lần gọi AVP  
+
+---
+
+### 1. So với phân quyền trong code
+
+| Tiêu chí | Code-based | Cognito + AVP |
+|----------|------------|----------------|
+| Bảo trì | Khó | Dễ hơn |
+| Mở rộng | Kém | Tốt |
+| Audit | Khó | Rõ ràng |
+| Thay đổi rule | Phải deploy | Không cần deploy |
+
+---
+
+### 2. So với IAM
+
+- IAM phù hợp cho system-to-system  
+- AVP phù hợp cho application/B2C authorization  
+
+---
+
+### 3. Cách kiểm thử
+
+Có thể test theo:
+
+- Unit test policy Cedar  
+- Test role (Admin/User/Guest)  
+- Integration test Cognito → AVP  
+- Scenario test theo use case thực tế  
+
+---
+
+## Kết luận
+
+Việc kết hợp **Amazon Cognito** và **Amazon Verified Permissions** giúp xây dựng hệ thống B2C theo hướng hiện đại hơn:
+
+> Tách biệt authentication và authorization, giúp hệ thống dễ mở rộng và dễ quản lý.
+
+Tuy nhiên, cần chú ý tối ưu chi phí khi hệ thống có lượng request lớn.
+
+---
+
+### Nguồn tham khảo
+https://aws.amazon.com/blogs/security/building-secure-b2c-applications-with-fine-grained-access-control-using-amazon-cognito-and-amazon-verified-permissions/
