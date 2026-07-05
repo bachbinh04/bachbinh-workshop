@@ -8,12 +8,13 @@ chapter: false
     
 # Internship Report
 
-### Student Information:
+### Student Information
+
 &emsp; **Full Name:** Bach The Binh
 
-&emsp; **Phone Number:** 0935717793 
+&emsp; **Phone Number:** 0935717793
 
-&emsp; **Email:** bachbinh04@gmail.com
+&emsp; **Email:** <bachbinh04@gmail.com>
 
 &emsp; **University:** Hutech Univeristy
 
@@ -31,10 +32,10 @@ chapter: false
 
 ### Report Content
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Translated Blogs](3-BlogsTranslated/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+1. [Worklog](1-Worklog/)
+2. [Proposal](2-Proposal/)
+3. [Translated Blogs](3-BlogsTranslated/)
+4. [Events Participated](4-EventParticipated/)
+5. [Workshop](5-Workshop/)
+6. [Self-evaluation](6-Self-evaluation/)
+7. [Sharing and Feedback](7-Feedback/)
