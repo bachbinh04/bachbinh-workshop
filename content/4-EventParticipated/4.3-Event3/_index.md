@@ -1,121 +1,67 @@
 ---
-title: "Event 2"
+title: "Event 3"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
-
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# SUMMARY REPORT: BUILDING LARGE-SCALE VOICE AI ASSISTANTS (VOICE AGENTS)
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+* Introduce a general overview of the inner workings of Voice AI and how to enable voice communication for artificial intelligence systems.
+* Analyze the limitations of current Voice AI for the Vietnamese language and solve the problem of processing natural language in enterprise environments (especially the banking sector).
+* Explore architectural standards to bring a Voice Agent from a Proof of Concept (POC) to a production environment.
+* Inspire the development of natural, smooth, and secure human-computer communication experiences.
 
-### Speakers
+## Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+* **Hieu Nghi**
+* **Kiet**
+* **Trung Do**
 
-### Key Highlights
+## Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+Selecting language-appropriate AI architectures
+* Most current Speech-to-Speech models are only optimized for English. Vietnamese is a low-resource language, so to run efficiently, the system architecture is split into three parts: Speech-to-Text (STT) -> LLM for text processing -> Text-to-Speech (TTS).
+* This architecture helps enterprises tightly control AI responses (preventing the AI from hallucinating or saying inappropriate things) and easily execute complex tasks (Tool calling) such as automatically blocking bank cards.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+Handling context and communication culture (Context & Culture)
+* The system needs the ability to recognize gender from voice to address users (e.g., Mr./Ms.) accurately.
+* Handling the "interruption" problem: The AI must be trained to distinguish when a user pauses to think (e.g., pauses while reading a phone number) and when they have finished speaking, avoiding cutting off the customer.
+* For regional accents, STT training data needs 10-20% local accents to recognize information well. However, AI responses should maintain standard accents, except for specific use cases like sales or debt collection.
 
-#### Transitioning to modern application architecture – Microservices
+Optimizing speed and going to Production
+* Response speed (Latency) is critical. Audio processing, text translation, and LLM execution must be done via a *streaming* mechanism (continuous data flow) to minimize latency.
+* Must have a *Human-in-the-loop* mechanism: The system needs to detect when the AI reaches its limit (e.g., when the customer becomes frustrated) to transition the call smoothly to a human agent.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+## Key Takeaways
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+Design Mindset
+* A great AI product lies not only in the core technology but also in user experience, understanding behaviors, and natural human communication culture.
+* When designing automation systems, always leave a smooth fallback route (handing over to real humans) instead of relying 100% on AI in sensitive customer touchpoints.
 
-#### Domain-Driven Design (DDD)
+Technical Architecture
+* Mastered the superiority of the 3-component decoupled model (STT - LLM - TTS) when solving specific language problems.
+* Understood the mandatory role of streaming and tool calling mechanisms in transforming AI from a passive Q&A chatbot into an active real-time agent.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+Work Application
+* **Improving App Experiences:** Apply the STT-LLM-TTS architecture to integrate voice-controlled assistants into cross-platform mobile apps (such as Flutter) connecting with the backend, allowing hands-free interaction for end-users.
+* **Optimizing Cloud Infrastructure:** Apply latency optimization and streaming handling principles to develop systems on AWS, combining cloud foundational knowledge to build high-speed, highly resilient automation flows.
 
-#### Event-Driven Architecture
+## Event Experience
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+Learning from field experts
+* Shared insights from founders and engineers brought a deep perspective on the gap between building a simple AI demo and building an actual production system serving millions of users at major banks.
 
-#### Compute Evolution
+Hands-on technical exposure
+* Observed a live demo of the Voice Agent and understood how engineers resolve complex "pain points" of the Vietnamese language.
+* Expanded the vision of the potential of next-generation AI systems when granted execution capabilities via Tool calling, rather than just passive information retrieval.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+## Lessons Learned
 
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+* Decoupled architecture (STT - LLM - TTS) combined with function calling (Tool Calling) is the optimal solution to overcome the low-resource barrier of Vietnamese and turn AI into active "executors".
+* Culturally aware communication experiences (accurate addressing, natural pauses) and fallback mechanisms to humans (Human-in-the-loop) are critical factors for deploying Voice AI in production.
 
 #### Some event photos
 * ![alt text](/images/4-EventParticipated/4.1-Event3/image.png)

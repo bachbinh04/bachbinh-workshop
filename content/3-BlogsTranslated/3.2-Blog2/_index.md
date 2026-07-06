@@ -1,123 +1,131 @@
 ---
-title: "Blog 2"
-date: 2024-01-01
+title: "Building Secure B2C Applications with Amazon Cognito and Amazon Verified Permissions"
+date: 2026-06-16
 weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+# Building Secure B2C Applications with Amazon Cognito and Amazon Verified Permissions
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+In modern B2C applications, user management is not limited to logging in but also includes fine-grained access control to specific resources.
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+Typically, the system must address two main challenges:
+- **Authentication:** Verifying who the user is.
+- **Authorization:** Determining what the user is allowed to do.
 
----
-
-## Architecture Guidance
-
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
-
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
-
-**The solution architecture is now as follows:**
-
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+AWS recommends combining **Amazon Cognito** and **Amazon Verified Permissions** to separate these two concerns, making the system cleaner and more scalable.
 
 ---
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+## The Problem with the Traditional Approach
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+In many applications, authorization logic is often written directly in the code:
+- Hard to scale as the number of roles increases.
+- Hard to maintain when rules become complex.
+- Prone to scattered authorization logic.
+
+As the system grows larger, this approach is no longer appropriate.
 
 ---
 
-## Technology Choices and Communication Scope
+## AWS Solution
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+AWS proposes a decoupled architecture:
+- **Amazon Cognito:** Handles user authentication and issues JWT tokens.
+- **Amazon Verified Permissions (AVP):** Evaluates access requests based on policies.
 
----
-
-## The Pub/Sub Hub
-
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
-
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+Instead of writing logic in the application code, we define policies separately using the **Cedar language** and let AVP handle the decisions.
 
 ---
 
-## Core Microservice
+## System Architecture Workflow
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
+**(Insert image here: Architecture Diagram)**  
+*Figure 1: Cognito + Verified Permissions Flow*
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
-
----
-
-## Front Door Microservice
-
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
+Basic processing flow:
+1. User logs in via Amazon Cognito.
+2. Cognito returns a JWT token.
+3. The application sends requests containing the token.
+4. The backend calls Amazon Verified Permissions.
+5. AVP evaluates the policy.
+6. Returns Allow / Deny.
 
 ---
 
-## Staging ER7 Microservice
+## Supported Authorization Models
 
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
+The solution supports multiple common authorization patterns:
+- **Resource-based access:** Users can only access their own resources.
+- **Role-based access (RBAC):** Access control based on user roles.
+- **Hierarchical access:** Access hierarchy according to organizational structure.
+- **Explicit deny:** Denials always take precedence.
+- **Admin override:** Admins have elevated privileges.
 
 ---
 
-## New Features in the Solution
+## Key Benefits
 
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+This solution brings several distinct advantages:
+- Separation of authentication and authorization.
+- Reduced authorization logic within application code.
+- Policy changes can be made without redeploying the system.
+- Enhanced auditability and centralized permissions management.
+- Well-suited for multi-tenant B2C / SaaS systems.
+
+---
+
+### Amazon Cognito Cost
+- Billed based on **Monthly Active Users (MAU)**.
+- Costs increase with the number of users.
+
+### Amazon Verified Permissions Cost
+- Billed based on the number of policy evaluation requests.
+- More requests lead to higher costs.
+
+- For small systems: costs remain low.
+- For large systems: it is necessary to optimize AVP API calls.
+
+---
+
+### 1. Comparison with Code-Based Authorization
+
+| Criteria | Code-based | Cognito + AVP |
+|----------|------------|----------------|
+| Maintenance | Hard | Easier |
+| Scalability | Poor | Good |
+| Audit | Hard | Clear |
+| Rule Changes | Requires deployment | No deployment required |
+
+---
+
+### 2. Comparison with IAM
+
+- IAM is suitable for system-to-system access control.
+- AVP is designed for application/B2C authorization.
+
+---
+
+### 3. Testing Approaches
+
+Testing can be carried out via:
+- Unit testing Cedar policies.
+- Role-based testing (Admin/User/Guest).
+- Cognito to AVP integration tests.
+- Scenario-based testing based on real-world use cases.
+
+---
+
+## Conclusion
+
+Combining **Amazon Cognito** and **Amazon Verified Permissions** enables a modern approach to B2C systems:
+
+> Separating authentication and authorization makes the system easier to scale and manage.
+
+However, attention should be paid to cost optimization when the system generates a large volume of requests.
+
+---
+
+### Reference Sources
+https://aws.amazon.com/blogs/security/building-secure-b2c-applications-with-fine-grained-access-control-using-amazon-cognito-and-amazon-verified-permissions/

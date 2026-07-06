@@ -7,7 +7,7 @@ pre: " <b> 1. </b> "
 ---
 
 
-**On this page**, you will find a summary of my worklog throughout my internship. The program consists of 11 weeks, with specific tasks each week as follows:
+**On this page**, you will find a summary of my worklog throughout my internship. The program consists of 12 weeks, with specific tasks each week as follows:
 
 **Week 1:** [Getting familiar with AWS and basic services](1.1-week1/)
 
@@ -30,4 +30,6 @@ pre: " <b> 1. </b> "
 **Week 10:** [Completing the group project, updating the workshop website, and writing the internship report](1.10-week10/)
 
 **Week 11:** [Changing project name to AI Assistant, continuing the report, and completing the workshop web](1.11-week11/)
+
+**Week 12:** [Focusing on writing the graduation internship report and finalizing internship files](1.12-week12/)
 

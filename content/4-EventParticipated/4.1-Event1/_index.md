@@ -5,117 +5,64 @@ weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
-
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# SUMMARY REPORT: AUTOMATING WORK WITH AMAZON Q AI ASSISTANT AND MCP
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+* Introduce **Amazon Q**, a user-friendly AI assistant developed by AWS for end-users.
+* Resolve time-consuming issues in business operations and reporting.
+* Explain the inner workings of AI Agents and how to use the Model Context Protocol (MCP) to allow AI to interact with external applications.
+* Inspire developers with product design mindsets focused on solving real-world customer problems.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+* **Hai An** - Cloud Consultant at C Pacific Vietnam (Speaker who has presented at AWS Singapore Summit and Silicon Valley).
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+User-Centric Design
+* Technical expertise is only one factor; the most critical element in creating a successful product is **solving the user's/customer's problem**.
+* AI application automates the process of gathering data to produce weekly reports, saving time for managers and executives (C-level).
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+Amazon Q Integration Ecosystem
+* AWS has built an Agent platform that integrates tightly with popular ecosystems such as **Microsoft** (Word, Outlook, Teams, PowerPoint) and **Google** (Gmail, Calendar).
 
-#### Transitioning to modern application architecture – Microservices
+Concept of Agents and MCP (Model Context Protocol)
+* Large Language Models (LLMs) are highly intelligent but **cannot take action independently** (e.g., automatically scheduling an appointment or sending an email).
+* To enable AI to interact with the real world, the system requires execution functions (Actions/Functions). This protocol is called **MCP - acting as the "extended arms"** connecting AI with platforms like Gmail, Jira, or Confluence.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+Automation via Hands-on Demo Flows
+* **Creating Analytics Dashboards:** Users without business intelligence (BI) knowledge can upload a raw Excel file (e.g., sales data), and Amazon Q will automatically create analysis tables and render dashboard charts.
+* **Meeting Summarization:** The AI has the capability to transcribe speech to text, automatically summarize key decisions in a meeting, and trigger MCP to send "next steps" report emails to participants.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
-
-#### Domain-Driven Design (DDD)
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+Security & Compliance
+* The platform operates based on the AWS Shared Responsibility Model: AWS manages the infrastructure and foundation models, while users manage their own data and applications.
 
 ### Key Takeaways
 
-#### Design Mindset
+### Design Mindset
+* Technology products must start from **fundamental and close-to-life needs** of people.
+* AI system design must go beyond simple question-and-answer (chat) interfaces and aim to transform AI into active "executors" (Agents) that deliver direct operational value.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+### Technical Architecture
+* Mastered the core concept: **Agent = LLM + Computing Services (Action/Function/MCP)**.
+* Understood how the Amazon Q platform combines AI processing with third-party APIs to create complete automation flows.
 
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+### Work Application
+* **Boosting Individual/Team Productivity:** Use the new Amazon Q Desktop version to quickly process raw Excel data into visual reports without spending time setting up complex BI tools.
+* **Process Governance Automation:** Research and develop internal MCP modules to integrate AI assistants with tools used in the company (such as Jira, Microsoft Teams) to automate task tracking and follow-up reminders after meetings.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Learning from highly skilled speakers
+* The presentation by speaker Hai An brought great inspiration. The speaker emphasized that everyone's technical capability is comparable; the difference lies in **confidence** and the ability to collaborate with teammates to build amazing products.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+Hands-on technical exposure
+* Observed firsthand how the system parses natural language requests (prompts) into structured "system prompts" (including overview, key decisions, action items) so the AI understands its task precisely.
+* Saw the great potential of **MCP "extended arms"** in transforming a passive LLM into an active system capable of interacting with emails and calendars.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+Using modern tools
+* Introduced to the free **Amazon Q** platform, fostering a mindset that developers can write custom MCP servers to extend AI capability depending on their own requirements.
 
 #### Some event photos
 * ![alt text](/images/4-EventParticipated/4.1-Event1/image-1.png)

@@ -7,7 +7,7 @@ pre: " <b> 1. </b> "
 ---
 
 
-**Trong trang này**, bạn sẽ thấy thông tin tóm tắt nhật ký công việc (worklog) trong suốt quá trình thực tập của tôi. Chương trình thực tập được thực hiện trong 11 tuần với nội dung cụ thể từng tuần như sau:
+**Trong trang này**, bạn sẽ thấy thông tin tóm tắt nhật ký công việc (worklog) trong suốt quá trình thực tập của tôi. Chương trình thực tập được thực hiện trong 12 tuần với nội dung cụ thể từng tuần như sau:
 
 **Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản](1.1-week1/)
 
@@ -30,3 +30,5 @@ pre: " <b> 1. </b> "
 **Tuần 10:** [Hoàn thành dự án nhóm, cập nhật website workshop và viết báo cáo thực tập](1.10-week10/)
 
 **Tuần 11:** [Thay đổi tên project thành AI Assistant, tiếp tục viết báo cáo thực tập và hoàn thiện web workshop](1.11-week11/)
+
+**Tuần 12:** [Tập trung viết báo cáo thực tập tốt nghiệp và hoàn tất hồ sơ thực tập](1.12-week12/)
