@@ -14,9 +14,9 @@ Trong workshop này, bạn sẽ triển khai toàn bộ hệ thống **AI Assist
 
 **AI Assistant** là ứng dụng tích hợp AI với các tính năng:
 
-+ Chat với AI (Google Gemini)
-+ Đồng bộ dữ liệu giữa Desktop App (Unity) và Web
-+ Lưu trữ dữ liệu trên AWS
++  Chat với AI (Google Gemini)
++  Đồng bộ dữ liệu giữa Desktop App (Unity) và Web
++  Lưu trữ dữ liệu trên AWS
 
 #### Kiến trúc hệ thống
 
