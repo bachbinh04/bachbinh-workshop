@@ -5,77 +5,67 @@ weight: 4
 chapter: false
 pre: " <b> 4.4. </b> "
 ---
-# SUMMARY REPORT: EVENT 4 PROJECT PRESENTATIONS & DEMO DAY
+# SUMMARY REPORT: AI-POWERED CONVERSATIONAL ORDERING SOLUTION
 
-### Event Objectives
+### Project Objectives
 
-* Summarize and listen to presentations of practical AI products and solutions from 5 development teams.
-* Explore diverse applications of AI/LLM, Computer Vision, Multi-agent Systems, and Cloud infrastructure across domains: F&B, Business Strategy Analysis, SA Architectural Solutions, Crowd Monitoring, and Anti-Money Laundering (AML).
-* Learn hands-on experience in product design, packaging, and solving complex business problems from team presentations.
+* **Resolve app-switch friction:** Customers often lose interest when forced to leave their active chat stream to download a new app, log in, and register an account just to order food.
+* **Overcome legacy AI hallucination errors:** Learn from McDonald's AI failure when it misidentified customer intent and erroneously ordered hundreds of chicken nuggets.
+* **Build a seamless multi-channel AI ordering assistant:** Deploy AI ordering across familiar messaging channels (e.g., Zalo, WhatsApp), enabling customers to order food directly during natural messaging.
 
-## List of Participating Teams & Projects
+## Speakers
 
-### 1. Team One Team
-
-* **Topic:** AI-powered Conversational Ordering.
-* **Project Description:** Building a multi-channel AI chatbot (e.g., Zalo, WhatsApp) that allows customers to order food (simulated for the KFC brand) directly via natural messaging without downloading an app or creating a new account.
-
-### 2. Team Signal Scout (formerly Dream AI)
-
-* **Topic:** Multi-agent System for Business Strategy Analysis.
-* **Project Description:** A solution that collects and links fragmented competitor data. From there, AI helps strategic planners analyze data, assess risks, and forecast Return on Investment (ROI) if the business adopts competitor structures/strategies.
-
-### 3. Team Plan (or Team BL)
-
-* **Topic:** SA Professional AI Native App (AI Assistant for Solution Architects).
-* **Project Description:** An application that helps Solution Architects (SAs) analyze requirements from natural language or text documents to automatically draw system architecture diagrams, export cost estimation spreadsheets, and generate infrastructure code (such as Terraform).
-
-### 4. Team 3K
-
-* **Topic:** Sheper (AI Camera System for Anti-Congestion).
-* **Project Description:** A project applying Computer Vision (YOLO) and real-time AI to monitor crowd flows. The system detects, alerts, and automatically dispatches staff to resolve congestion in crowded areas such as airports or supermarkets.
-
-### 5. Team Six Pillar (Sixer)
-
-* **Topic:** Adaptive Workflow Engine (Anti-Money Laundering Solution - AML).
-* **Project Description:** A system using a Multi-agent architecture to support banks and financial institutions. The AI assistant automatically investigates suspicious transaction alerts, analyzes cash flows and customer profiles to reduce false positive rates, and automatically generates evidence reports for compliance officers.
+* Members of **One Team** - First Prize Winners at the FCAJ x Agentic AI Build Week event.
 
 ## Key Highlights
 
-* **Natural Conversational Interaction & Multi-channel:** Meeting users where they are on messaging platforms (Zalo, WhatsApp) eliminating app download friction for F&B customers.
-* **Power of Multi-Agent Systems:** Deploying multi-agent architectures to process complex business logic in competitor strategy analysis and AML transaction investigations with high accuracy.
-* **Automation for Solution Architects:** Converting natural language into architecture diagrams, cost estimations, and Infrastructure as Code (Terraform) to accelerate cloud solution delivery.
-* **Real-time Computer Vision:** Combining YOLO with AI logic to monitor crowd density and enable immediate operational dispatch in public spaces.
+### Problems with Current Ordering Systems
+* Traditional applications have complex menus and heavy advertisement popups that slow down user onboarding.
+* Legacy AI lacks an understanding of natural conversation nuances, easily registering wrong orders when customers abruptly alter their preferences at the last minute.
+
+### AI Conversational Ordering Solution
+* **Zero Friction:** Customers chat directly with the brand (e.g., KFC) over familiar messaging platforms like Zalo without downloading apps or creating new accounts.
+* **Operational Mechanism:** AI automatically parses customer intent, asks clarifying questions, adds items to cart, and suggests promo code applications.
+
+### Flexible & Cost-Effective System Architecture
+* **Adapter Pattern:** Uses a "Channel Adapter" to ingest messages across various channels and normalize them before sending to the AI core. This allows scaling to other platforms (such as Jollibee, Facebook) without rebuilding the system.
+* **Power of Agent Core:** Utilizes Amazon Bedrock Agent Core instead of pure Lambda due to its built-in long-term Memory, enabling the AI to recall past order history for better customer service.
+* **Ultra-Low Cost:** Serverless architecture achieves 3-5 seconds latency at ~0.006 USD per order, cutting standard infrastructure costs by up to 60%.
 
 ## Key Takeaways
 
-### Design Mindset
-
-* AI solutions must focus on solving explicit pain points of users and businesses.
-* Leverage existing channels to reduce adoption friction.
+### Design Mindset (Business-First)
+* **Verification Mechanism:** AI takes orders but always sends a final summary for customer confirmation to prevent incorrect orders.
+* **Human-in-the-Loop:** Incorporates a Staff Dashboard so restaurant employees can monitor live AI chat histories and intervene immediately if errors occur.
 
 ### Technical Architecture
+* Scrapes data automatically using third-party tools like Tiny Fish from official KFC websites to keep menus up-to-date without needing direct brand APIs.
+* Understands ingress WAF firewall layers to protect system traffic during sudden surges.
 
-* Multi-agent architectures effectively orchestrate specialized agents for complex workflows.
-* Real-time Computer Vision (YOLO) integration with streaming event pipelines.
-* Automated IaC generation and visual diagram rendering from LLM output.
+### Hackathon Lessons (Teamwork)
+* **Power of Diversity:** A 5-member team of strangers with language barriers (Indian accent, American accent, non-English speaker) collaborated with high efficiency.
+* Under extreme time pressure, creating a clear Architecture Diagram was essential to convince judges within a few minutes of pitching.
 
 ### Work Application
-
-* Apply multi-agent patterns and AI automation concepts in building real-world applications.
+* **Memory-enabled Models:** Integrate Agent Core into internal chatbot projects to preserve long-term context across sessions.
+* **Adapter Architecture:** Apply Adapter Pattern in multi-input systems for data normalization and effortless scaling.
+* **Product Mindset:** Build operational monitoring tools (Staff/Admin Dashboards) alongside AI features so systems deliver tangible business value.
 
 ## Event Experience
 
-* **Engaging Presentations:** Witnessed high-quality demos and technical insights from all 5 teams.
-* **Broader Perspective:** Saw the immense potential of GenAI and Computer Vision spanning F&B, retail, banking, and cloud solution architecture.
+### Learning from Winning Teams
+* Realized that a great idea isn't about cramming complex tech, but solving real user pain points (e.g., app download friction).
+* Analyzing big tech failures (McDonald's) as a premise for a new solution is a powerful pitching technique.
 
-## Lessons Learned
+### Hands-on Technical Experience
+* Witnessed a smooth Multi-channel Generative AI system triggering direct actions/tools (cart additions, promo code usage).
 
-* Combining appropriate AI tech with real-world problems creates breakthrough value.
-* Multi-agent systems and AI-driven automation are becoming core paradigms in modern software development.
+### Networking & Hackathon Spirit
+* Inspiring atmosphere watching developers work through the night (until 3-4 AM) to deliver impressive solutions.
+* Reaffirmed the message: In the AI era, the most critical factor is the ability to "Roll together" — collaborate and lower ego to build a unified product.
 
 #### Some event photos
 
 * ![alt text](/images/4-EventParticipated/4.4-Event4/image.jpg)
 
-> Overall, Event 4 provided valuable practical insights and strong creative inspiration through diverse projects presented by 5 teams.
+> Overall, Event 4 provided valuable practical insights and strong creative inspiration through One Team's First Prize winning AI-Powered Conversational Ordering solution.

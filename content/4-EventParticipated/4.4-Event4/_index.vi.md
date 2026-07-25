@@ -5,79 +5,78 @@ weight: 4
 chapter: false
 pre: " <b> 4.4. </b> "
 ---
-# BÀI THU HOẠCH: BÁO CÁO CÁC DỰ ÁN TRONG EVENT 4
+# BÀI THU HOẠCH: GIẢI PHÁP ĐẶT HÀNG QUA HỘI THOẠI AI (AI-POWERED CONVERSATIONAL ORDERING)
 
-### Mục Đích Của Sự Kiện
+### Mục Đích Của Dự Án
 
-* Tổng kết và lắng nghe phần trình bày sản phẩm, giải pháp AI thực tế từ các nhóm phát triển.
-* Khám phá ứng dụng đa dạng của AI/LLM, Computer Vision, Multi-agent Systems và hạ tầng Cloud trong nhiều lĩnh vực: F&B, Phân tích chiến lược doanh nghiệp, Giải pháp kiến trúc SA, Giám sát an ninh/ùn tắc, và Phòng chống rửa tiền (AML).
-* Học hỏi kinh nghiệm thực chiến về quy trình thiết kế, đóng gói sản phẩm và giải quyết bài toán nghiệp vụ phức tạp từ các đội thi.
+* **Giải quyết rào cản của việc chuyển đổi ứng dụng (app switch):** Khách hàng thường mất hứng thú khi phải thoát khỏi luồng trò chuyện hiện tại để tải một app mới, đăng nhập và tạo tài khoản chỉ để đặt đồ ăn.
+* **Khắc phục các lỗi "ảo giác" (hallucination) của AI đời cũ:** Lấy bài học từ thất bại của hệ thống AI McDonald's khi nhận diện sai ý định và đặt nhầm hàng trăm miếng gà cho khách hàng.
+* **Xây dựng trợ lý AI đặt hàng đa kênh:** Đưa AI đặt hàng lên các ứng dụng nhắn tin quen thuộc (như Zalo, WhatsApp) mượt mà, giúp khách hàng đặt đồ ăn ngay trong lúc nhắn tin tự nhiên.
 
-## Danh Sách Các Đội Thi & Đề Tài Dự Án
+## Danh Sách Diễn Giả
 
-### 1. Team One Team
-
-* **Chủ đề:** AI-powered Conversational Ordering (Trợ lý AI đặt hàng qua hội thoại).
-* **Mô tả dự án:** Dự án xây dựng một chatbot AI đa kênh (như Zalo, WhatsApp) cho phép khách hàng đặt đồ ăn (ví dụ mô phỏng cho thương hiệu KFC) trực tiếp qua tin nhắn một cách tự nhiên mà không cần tải app hay tạo tài khoản mới.
-
-### 2. Team Signal Scout (tên cũ: Dream AI)
-
-* **Chủ đề:** Hệ thống Multi-agent phân tích chiến lược kinh doanh.
-* **Mô tả dự án:** Giải pháp thu thập và xâu chuỗi các dữ liệu rời rạc của công ty đối thủ. Từ đó, AI giúp các nhà hoạch định chiến lược phân tích, đánh giá rủi ro và dự báo tỷ suất hoàn vốn (ROI) nếu doanh nghiệp áp dụng cấu trúc/chiến lược của đối thủ.
-
-### 3. Team Plan (hoặc Team BL)
-
-* **Chủ đề:** SA Professional AI Native App (Trợ lý AI cho Solution Architect).
-* **Mô tả dự án:** Một ứng dụng giúp các kỹ sư giải pháp (SA) phân tích yêu cầu bằng ngôn ngữ tự nhiên hoặc tài liệu văn bản để tự động vẽ sơ đồ kiến trúc hệ thống, xuất bảng tính chi phí và tự động tạo mã cơ sở hạ tầng (như Terraform).
-
-### 4. Team 3K
-
-* **Chủ đề:** Sheper (Hệ thống AI Camera chống ùn tắc).
-* **Mô tả dự án:** Dự án ứng dụng Computer Vision (YOLO) và AI theo thời gian thực để giám sát luồng người. Hệ thống giúp phát hiện, cảnh báo và tự động điều phối nhân viên giải quyết tình trạng ùn tắc tại các khu vực đông người như sân bay hay siêu thị.
-
-### 5. Team Six Pillar (Sixer)
-
-* **Chủ đề:** Adaptive Workflow Engine (Giải pháp phòng chống rửa tiền - AML).
-* **Mô tả dự án:** Hệ thống sử dụng kiến trúc Multi-agent hỗ trợ các ngân hàng và tổ chức tài chính. Trợ lý AI sẽ tự động điều tra các cảnh báo giao dịch đáng ngờ, phân tích dòng tiền, hồ sơ khách hàng để giảm thiểu tỷ lệ cảnh báo sai (false positive) và tự động tạo báo cáo bằng chứng cho chuyên viên.
+* Các thành viên của đội **One Team** - Đội xuất sắc giành **Giải Nhất (First Prize)** tại sự kiện FCAJ x Agentic AI Build Week.
 
 ## Nội Dung Nổi Bật
 
-* **Tương tác hội thoại tự nhiên & Đa kênh:** Xu hướng đưa giải pháp AI tiếp cận trực tiếp kênh nhắn tin phổ biến (Zalo, WhatsApp) loại bỏ rào cản cài đặt app, mang lại trải nghiệm tiện lợi tối đa cho khách hàng F&B.
-* **Sức mạnh của Multi-Agent Systems:** Ứng dụng kiến trúc Multi-agent trong việc phân tích thông tin chiến lược doanh nghiệp và tự động điều tra dòng tiền gian lận AML, giúp xử lý các bài toán nghiệp vụ phức tạp với độ chính xác cao.
-* **Tự động hóa công việc cho Kỹ sư Giải pháp (SA):** Khả năng chuyển đổi từ yêu cầu ngôn ngữ tự nhiên sang sơ đồ kiến trúc, dự toán chi phí và sinh mã Infrastructure as Code (Terraform) giúp tăng tốc đáng kể quy trình tư vấn và triển khai hạ tầng đám mây.
-* **Computer Vision trong xử lý thời gian thực:** Kết hợp mô hình YOLO với AI để phân tích mật độ đám đông, hỗ trợ vận hành và điều phối nhân sự kịp thời tại các địa điểm công cộng.
+### Vấn đề của các hệ thống đặt hàng hiện hành
+
+* Các ứng dụng truyền thống có menu phức tạp, nhồi nhét nhiều quảng cáo khiến khách hàng tốn thời gian làm quen.
+* AI đời cũ không hiểu được bản chất của giao tiếp tự nhiên (natural conversation), dễ ghi nhận sai đơn hàng khi khách hàng bất ngờ thay đổi ý định vào phút chót.
+
+### Giải pháp Đặt hàng bằng AI (Conversational Ordering)
+
+* **Không ma sát (Zero friction):** Khách hàng chat trực tiếp với thương hiệu (ví dụ KFC) qua nền tảng quen thuộc như Zalo. Không cần tải app, không cần luồng tạo tài khoản mới.
+* **Cơ chế hoạt động:** AI sẽ tự động phân tích ý định (intent) của khách, hỏi đáp để làm rõ yêu cầu, tự động thêm món vào giỏ hàng và gợi ý áp dụng mã khuyến mãi.
+
+### Kiến trúc hệ thống linh hoạt và tiết kiệm
+
+* **Tách biệt logic bằng Adapter:** Sử dụng "Channel Adapter" để tiếp nhận tin nhắn từ nhiều kênh khác nhau, sau đó chuẩn hóa (Normalize message) trước khi đưa vào lõi AI. Nhờ đó, có thể mở rộng sang các nền tảng khác (như Jollibee, Facebook) mà không cần đập đi xây lại hệ thống.
+* **Sức mạnh của Agent Core:** Đội không dùng Lambda thuần túy mà sử dụng Amazon Bedrock Agent Core vì dịch vụ này có Bộ nhớ (Memory). Nó có thể nhớ được lịch sử đặt hàng của tuần trước để phục vụ khách hàng tốt hơn.
+* **Chi phí cực thấp:** Hệ thống chỉ mất 3-5 giây độ trễ và tiêu tốn khoảng 0.006 USD cho mỗi đơn hàng nhờ kiến trúc Serverless, giảm được tới 60% chi phí hạ tầng thông thường.
 
 ## Những Gì Học Được
 
-### Tư Duy Thiết Kế
+### Tư Duy Thiết Kế (Business-First)
 
-* Trọng tâm của giải pháp AI phải là giải quyết nỗi đau cụ thể của người dùng và doanh nghiệp (giảm friction khi đặt hàng, tự động hóa quy trình phân tích, giảm tỷ lệ cảnh báo sai trong ngân hàng).
-* Tận dụng tối đa các nền tảng và kênh giao tiếp có sẵn thay vì bắt người dùng phải làm quen với công cụ mới.
+* **Luôn có cơ chế kiểm chứng (Verify):** AI lấy đơn nhưng luôn phải gửi bảng tóm tắt để khách hàng xác nhận lại cuối cùng, tránh trường hợp gửi nhầm đồ khách không muốn.
+* **Human in the loop (Con người trong vòng lặp):** Giải pháp không bỏ rơi yếu tố con người. Đội đã thiết kế một Dashboard (bảng điều khiển) dành cho nhân viên nhà hàng để theo dõi lịch sử chat của AI và can thiệp xử lý ngay khi có lỗi xảy ra.
 
 ### Kiến Trúc Kỹ Thuật
 
-* Kiến trúc Multi-agent phối hợp nhiều agent chuyên biệt để giải quyết các luồng công việc phức tạp (như phân tích chiến lược hay điều tra AML).
-* Tích hợp Computer Vision (YOLO) với hệ thống xử lý luồng sự kiện thời gian thực (Real-time Event Processing).
-* Sinh mã tự động (IaC - Terraform) và sơ đồ kiến trúc trực quan dựa trên kết quả phân tích LLM.
+* Việc sử dụng công cụ bên thứ ba như Tiny Fish để cào (scrape) dữ liệu tự động từ website chính thức của KFC giúp AI luôn có menu cập nhật nhất mà không cần API trực tiếp từ thương hiệu.
+* Hiểu được vai trò của tường lửa WAF ở lớp đầu tiên (ingress layer) nhằm bảo vệ traffic của hệ thống khi có lượng lớn người dùng đổ vào cùng lúc.
+
+### Bài Học Từ Hackathon (Teamwork)
+
+* **Sức mạnh của sự đa dạng:** Đội gồm 5 người hoàn toàn không quen biết nhau trước đó, với nhiều rào cản ngôn ngữ (tiếng Anh giọng Ấn, giọng Mỹ, và có thành viên không nói tiếng Anh) nhưng vẫn kết nối và làm việc cực kỳ hiệu quả.
+* Để giành chiến thắng, ngoài code giỏi, nhóm đã phải chịu áp lực cực lớn về mặt thời gian để vẽ được Sơ đồ kiến trúc (Architecture Diagram) thật dễ hiểu nhằm thuyết phục ban giám khảo trong vòng chỉ vài phút trình bày.
 
 ### Ứng Dụng Vào Công Việc
 
-* Áp dụng tư duy Multi-agent và AI Automation vào việc phát triển các dự án thực tế.
-* Học hỏi cách thiết kế các giao tiếp conversational AI mượt mà và linh hoạt.
+* **Áp dụng mô hình có Memory:** Nghiên cứu tích hợp Agent Core vào các dự án chatbot nội bộ để hệ thống giữ được mạch ngữ cảnh (context) dài hạn thay vì bị "mất trí nhớ" sau mỗi phiên chat.
+* **Sử dụng kiến trúc Adapter:** Khi thiết kế các hệ thống phải kết nối nhiều nguồn đầu vào, sẽ áp dụng Adapter Pattern để chuẩn hóa dữ liệu, giúp dự án dễ dàng scale-up (mở rộng) sau này mà không ảnh hưởng tới Core Logic.
+* **Phát triển mindset về sản phẩm:** Không chỉ mải mê code tính năng AI, luôn phải xây dựng thêm các công cụ giám sát (Dashboard) cho đội ngũ vận hành (Staff/Admin) để hệ thống thực sự mang lại giá trị cho doanh nghiệp.
 
 ## Trải nghiệm trong event
 
-* **Lắng nghe và giao lưu:** Được chứng kiến các phần trình bày chất lượng từ 5 đội thi với những góc nhìn công nghệ sắc bén và tính ứng dụng cao.
-* **Mở rộng tầm nhìn:** Nhìn thấy tiềm năng vô hạn của GenAI và Computer Vision khi giải quyết các bài toán từ F&B, bán lẻ đến tài chính ngân hàng và tư vấn giải pháp.
+### Học hỏi từ các đội thi xuất sắc
 
-## Bài học rút ra
+* Lắng nghe phần pitching của quán quân giúp tôi nhận ra rằng: Một ý tưởng tốt không phải là nhồi nhét quá nhiều công nghệ phức tạp, mà là bắt đúng "nỗi đau" (pain point) của người dùng thực tế (sự phiền toái khi tải app mới).
+* Việc phân tích rõ sự thất bại của các công ty lớn (McDonald's) làm tiền đề cho giải pháp của mình là một kỹ năng thuyết trình và kêu gọi vốn (pitching) cực kỳ sắc bén.
 
-* Kết hợp đúng công nghệ AI với bài toán thực tế sẽ tạo ra giá trị đột phá cho doanh nghiệp.
-* Mô hình Multi-agent và tính năng tự động hóa bằng AI đang trở thành xu hướng cốt lõi trong xây dựng phần mềm hiện đại.
+### Trải nghiệm kỹ thuật thực tế
+
+* Thấy rõ được luồng hoạt động mượt mà của một hệ thống Multi-channel tích hợp Generative AI. Nhận thức được rằng AI không chỉ đóng vai trò hỏi đáp (chat) mà còn trực tiếp kích hoạt các hành động (Actions/Tools) như thêm vào giỏ hàng hay áp dụng mã giảm giá.
+
+### Kết nối và tinh thần Hackathon
+
+* Không khí của sự kiện vô cùng truyền cảm hứng. Hình ảnh các lập trình viên thức trắng đêm tới 3-4h sáng, uống Redbull, ngủ vật vờ dưới đất nhưng vẫn hoàn thành xuất sắc hệ thống đã cho thấy tinh thần khởi nghiệp và khả năng vượt qua giới hạn của các kỹ sư trẻ.
+* Sự kiện khẳng định mạnh mẽ thông điệp: Trong kỷ nguyên AI, điều quan trọng nhất không chỉ là kiến thức cá nhân mà là khả năng "Roll together" - hợp tác, hạ cái tôi xuống để build sản phẩm chung.
 
 #### Một số hình ảnh khi tham gia sự kiện
 
 * Thêm các hình ảnh của các bạn tại đây
 * ![alt text](/images/4-EventParticipated/4.4-Event4/image.jpg)
 
-> Tổng thể, Event 4 đã mang lại nhiều góc nhìn thực tiễn và cảm hứng sáng tạo mạnh mẽ thông qua các dự án đa dạng của 5 đội thi.
+> Tổng thể, Event 4 đã mang lại nhiều góc nhìn thực tiễn và cảm hứng sáng tạo mạnh mẽ thông qua dự án quán quân Giải Nhất AI-Powered Conversational Ordering của đội One Team.
