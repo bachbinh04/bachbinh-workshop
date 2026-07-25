@@ -17,7 +17,7 @@ pre: " <b> 4. </b> "
 > * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
 > * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+Trong quá trình thực tập, em đã tham gia 4 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là những món quà và những khoảnh khắc rất tuyệt vời.
 
 ### [Event 1](4.1-Event1/)
 
@@ -174,3 +174,23 @@ Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là
 * Security challenges in MCP-based integrations
 * Configuring Amazon Quick VPC private connectivity
 * Demo and real-world implementation insight
+
+---
+
+### [Event 4](4.4-Event4/)
+
+&emsp;**Tên sự kiện:** FCAJ Community Day - Demo Day Projects
+
+&emsp;**Thời gian:** 09:00 ngày 25/07/2026
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự
+
+## ☁️ **Tổng quan các đề tài dự án tại Event 4**
+
+1. **Team One Team - AI-powered Conversational Ordering:** Trợ lý AI đặt hàng qua hội thoại đa kênh (Zalo, WhatsApp) cho phép khách hàng đặt đồ ăn (mô phỏng cho thương hiệu KFC) trực tiếp qua tin nhắn một cách tự nhiên mà không cần tải app hay tạo tài khoản mới.
+2. **Team Signal Scout (tên cũ: Dream AI) - Hệ thống Multi-agent phân tích chiến lược kinh doanh:** Giải pháp thu thập và xâu chuỗi các dữ liệu rời rạc của công ty đối thủ. AI giúp các nhà hoạch định chiến lược phân tích, đánh giá rủi ro và dự báo tỷ suất hoàn vốn (ROI).
+3. **Team Plan (hoặc Team BL) - SA Professional AI Native App:** Trợ lý AI cho Solution Architect giúp phân tích yêu cầu bằng ngôn ngữ tự nhiên hoặc tài liệu văn bản để tự động vẽ sơ đồ kiến trúc hệ thống, xuất bảng tính chi phí và tự động tạo mã cơ sở hạ tầng (như Terraform).
+4. **Team 3K - Sheper (Hệ thống AI Camera chống ùn tắc):** Dự án ứng dụng Computer Vision (YOLO) và AI theo thời gian thực để giám sát luồng người, phát hiện, cảnh báo và tự động điều phối nhân viên giải quyết tình trạng ùn tắc tại các khu vực đông người như sân bay hay siêu thị.
+5. **Team Six Pillar (Sixer) - Adaptive Workflow Engine (Giải pháp phòng chống rửa tiền - AML):** Hệ thống sử dụng kiến trúc Multi-agent hỗ trợ ngân hàng và tổ chức tài chính tự động điều tra cảnh báo giao dịch đáng ngờ, phân tích dòng tiền, hồ sơ khách hàng để giảm tỷ lệ cảnh báo sai (false positive) và tự động tạo báo cáo bằng chứng cho chuyên viên.
