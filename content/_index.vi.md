@@ -15,13 +15,13 @@ chapter: false
 
 &emsp; **Email:** <bachbinh04@gmail.com>
 
-&emsp; **Trường:** Đại học Cong Nghe TP.HCM
+&emsp; **Trường:** Đại học Công Nghệ TP.HCM
 
 &emsp; **Ngành:** Công nghệ thông tin
 
 &emsp; **Lớp:** 22DTHA2
 
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Việt Nam
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
