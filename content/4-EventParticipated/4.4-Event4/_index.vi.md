@@ -78,5 +78,6 @@ pre: " <b> 4.4. </b> "
 
 * Thêm các hình ảnh của các bạn tại đây
 * ![alt text](/images/4-EventParticipated/4.4-Event4/image.jpg)
+* ![alt text](/images/4-EventParticipated/4.4-Event4/IMG.png)
 
 > Tổng thể, Event 4 đã mang lại nhiều góc nhìn thực tiễn và cảm hứng sáng tạo mạnh mẽ thông qua dự án quán quân Giải Nhất AI-Powered Conversational Ordering của đội One Team.
